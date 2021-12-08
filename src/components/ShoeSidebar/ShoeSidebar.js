@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { COLORS, WEIGHTS } from '../../constants';
+import { BREAK_POINTS, COLORS, WEIGHTS } from '../../constants';
 
 const Sidebar = () => {
   return (
@@ -23,7 +23,12 @@ const Sidebar = () => {
   );
 };
 
-const Wrapper = styled.aside``;
+const Wrapper = styled.aside`
+  @media (max-width: ${BREAK_POINTS.tablet}) {
+    display: none;
+  }
+
+`;
 
 const Link = styled.a`
   display: block;
