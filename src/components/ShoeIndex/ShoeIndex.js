@@ -72,11 +72,12 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-`;
+ `;
 
 const Title = styled.h2`
   font-size: 1.5rem;
   font-weight: ${WEIGHTS.medium};
 `;
+
 
 export default ShoeIndex;
