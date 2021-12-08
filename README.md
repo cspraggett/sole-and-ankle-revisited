@@ -32,7 +32,7 @@ Whichever approach you choose, your breakpoints should be specified in rems (not
 
 ## Exercise 2: Mobile header
 
-On smaller screens, we want to switch up our header:
+On "smaller screens, we want to switch up our header:
 
 ![Close-up screenshot of the new header](./docs/mobile-header.png)
 
