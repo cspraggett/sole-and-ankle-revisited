@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-import { BREAK_POINTS, COLORS, WEIGHTS } from '../../constants'
+import { BREAK_POINTS } from '../../constants'
 import Logo from '../Logo'
 import SuperHeader from '../SuperHeader'
 import MobileMenu from '../MobileMenu'
@@ -51,10 +51,10 @@ const MainHeader = styled.div`
   align-items: baseline;
   padding: 18px 32px;
   height: 72px;
-  border-bottom: 1px solid ${COLORS.gray[300]};
+  border-top: 1px solid var(--gray-300);
 
   @media (max-width: ${BREAK_POINTS.laptop}) {
-    border-top: 4px solid ${COLORS.gray[900]};
+    border-top: 4px solid var(--gray-900);
     align-items: center;
   }
 `
@@ -68,8 +68,6 @@ const SmallNav = styled.nav`
 
   @media (max-width: ${BREAK_POINTS.phone}) {
     gap: 24px;
-  }
-
   }
 `
 
@@ -96,11 +94,11 @@ const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: ${COLORS.gray[900]};
-  font-weight: ${WEIGHTS.medium};
+  color: var(--gray-900);
+  font-weight: var(--font-weight-medium);
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--secondary);
   }
 `
 
