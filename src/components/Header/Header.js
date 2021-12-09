@@ -1,19 +1,19 @@
-import React from "react";
-import styled from "styled-components/macro";
+import React from 'react'
+import styled from 'styled-components/macro'
 
-import { BREAK_POINTS, COLORS, WEIGHTS } from "../../constants";
-import Logo from "../Logo";
-import SuperHeader from "../SuperHeader";
-import MobileMenu from "../MobileMenu";
-import Icon from "../Icon";
+import { BREAK_POINTS, COLORS, WEIGHTS } from '../../constants'
+import Logo from '../Logo'
+import SuperHeader from '../SuperHeader'
+import MobileMenu from '../MobileMenu'
+import Icon from '../Icon'
+import UnstyledButton from '../UnstyledButton'
 
 const Header = () => {
-  const [showMobileMenu, setShowMobileMenu] = React.useState(false);
+  const [showMobileMenu, setShowMobileMenu] = React.useState(false)
   // For our mobile hamburger menu, we'll want to use a button
   // with an onClick handler, something like this:
   //
   // <button onClick={() => setShowMobileMenu(true)}>
-
   return (
     <header>
       <SuperHeader />
@@ -21,11 +21,10 @@ const Header = () => {
         <Side>
           <Logo />
         </Side>
-             <div> </div>
         <BigNav>
           <NavLink href="/sale">Sale</NavLink>
           <NavLink href="/new">New&nbsp;Releases</NavLink>
-          <NavLink href="/men">Men</NavLink>
+               <NavLink href="/men">Men</NavLink>
           <NavLink href="/women">Women</NavLink>
           <NavLink href="/kids">Kids</NavLink>
           <NavLink href="/collections">Collections</NavLink>
@@ -33,7 +32,9 @@ const Header = () => {
         <SmallNav>
           <Icon id="shopping-bag" strokeWidth={2} />
           <Icon id="search" strokeWidth={2} />
-          <Icon id="menu" strokeWidth={2} />
+          <Button onClick={() => setShowMobileMenu(true)}>
+            <Icon id="menu" strokeWidth={2} />
+          </Button>
         </SmallNav>
         <Side />
       </MainHeader>
@@ -42,8 +43,8 @@ const Header = () => {
         onDismiss={() => setShowMobileMenu(false)}
       />
     </header>
-  );
-};
+  )
+}
 
 const MainHeader = styled.div`
   display: flex;
@@ -56,7 +57,7 @@ const MainHeader = styled.div`
     border-top: 4px solid ${COLORS.gray[900]};
     align-items: center;
   }
-`;
+`
 
 const SmallNav = styled.nav`
   display: none;
@@ -70,7 +71,7 @@ const SmallNav = styled.nav`
   }
 
   }
-`;
+`
 
 const BigNav = styled.nav`
   display: flex;
@@ -84,11 +85,11 @@ const BigNav = styled.nav`
       display: flex;
     }
   }
-`;
+`
 
 const Side = styled.div`
   flex: 1;
-`;
+`
 
 const NavLink = styled.a`
   font-size: 1.125rem;
@@ -100,6 +101,8 @@ const NavLink = styled.a`
   &:first-of-type {
     color: ${COLORS.secondary};
   }
-`;
+`
 
-export default Header;
+const Button = styled(UnstyledButton)``
+
+export default Header
