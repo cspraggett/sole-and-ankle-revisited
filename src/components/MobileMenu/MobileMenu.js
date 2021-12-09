@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import { DialogOverlay, DialogContent } from '@reach/dialog'
 
-import { COLORS, QUERIES } from '../../constants'
+import { COLORS } from '../../constants'
 
 import UnstyledButton from '../UnstyledButton'
 import Icon from '../Icon'
@@ -43,7 +43,6 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
 const Overlay = styled(DialogOverlay)`
   position: fixed;
   top: 0;
-  // left: 0;
   bottom: 0;
   right: 0;
   padding-left: 75px;
@@ -55,7 +54,7 @@ const Overlay = styled(DialogOverlay)`
 `
 
 const Content = styled(DialogContent)`
-  background: white;
+  background: ${COLORS.white};
   display: flex;
   flex-direction: column;
   flex: 1;
