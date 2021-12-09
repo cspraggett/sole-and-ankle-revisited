@@ -24,7 +24,7 @@ const Header = () => {
         <BigNav>
           <NavLink href="/sale">Sale</NavLink>
           <NavLink href="/new">New&nbsp;Releases</NavLink>
-               <NavLink href="/men">Men</NavLink>
+          <NavLink href="/men">Men</NavLink>
           <NavLink href="/women">Women</NavLink>
           <NavLink href="/kids">Kids</NavLink>
           <NavLink href="/collections">Collections</NavLink>
@@ -75,8 +75,9 @@ const SmallNav = styled.nav`
 
 const BigNav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(1.5rem, 7vw - 2.75rem, 2.5rem);
   margin: 0px 48px;
+  overflow: auto;
 
   @media (max-width: ${BREAK_POINTS.tablet}) {
     display: none;
