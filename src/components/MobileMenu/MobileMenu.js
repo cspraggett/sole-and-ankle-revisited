@@ -16,11 +16,12 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
 
   return (
     <Overlay>
-      <Content aria-label={'hello'}>
+      <Content aria-label={'Menu'}>
         <Button onClick={onDismiss}>
           <Icon id="close" />
         </Button>
-        <NavContent aria-label={'hello'}>
+        <NavContent aria-label={'Main options'}>
+          <VisuallyHidden>Main options</VisuallyHidden>
           <a href="/sale">Sale</a>
           <a href="/new">New&nbsp;Releases</a>
           <a href="/men">Men</a>
@@ -28,7 +29,8 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
           <a href="/kids">Kids</a>
           <a href="/collections">Collections</a>
         </NavContent>
-        <FooterContent aria-label={'hello'}>
+        <FooterContent aria-label={'Footer'}>
+          <VisuallyHidden>Footer</VisuallyHidden>
           <a href="/terms">Terms and Conditions</a>
           <a href="/privacy">Privacy Policy</a>
           <a href="/contact">Contact Us</a>
@@ -61,7 +63,7 @@ const Content = styled(DialogContent)`
   align-items: flex-start;
   width: 300px;
   margin-left: 32px;
-  margin-bottom: 18px;
+  padding-bottom: 8px;
 
   & a {
     text-decoration: none;
