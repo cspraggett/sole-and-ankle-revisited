@@ -51,10 +51,10 @@ const MainHeader = styled.div`
   align-items: baseline;
   padding: 18px 32px;
   height: 72px;
-  border-top: 1px solid var(--gray-300);
+  border-top: 1px solid var(--color-gray-300);
 
   @media (max-width: ${BREAK_POINTS.laptop}) {
-    border-top: 4px solid var(--gray-900);
+    border-top: 4px solid var(--color-gray-900);
     align-items: center;
   }
 `
@@ -94,11 +94,11 @@ const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--gray-900);
+  color: var(--color-gray-900);
   font-weight: var(--font-weight-medium);
 
   &:first-of-type {
-    color: var(--secondary);
+    color: var(--color-secondary);
   }
 `
 

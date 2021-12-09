@@ -22,17 +22,17 @@ const CrumbWrapper = styled.div`
     &::before {
       content: '/';
       margin-right: 8px;
-      color: var(--gray-300);
+      color: var(--color-gray-300);
     }
   }
 `;
 
 const CrumbLink = styled.a`
-  color: var(--gray-700);
+  color: var(--color-gray-700);
   text-decoration: none;
 
   &:hover {
-    color: var(--gray-900);
+    color: var(--color-gray-900);
   }
 `;
 
