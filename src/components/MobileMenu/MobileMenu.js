@@ -8,12 +8,8 @@ import Icon from '../Icon'
 import VisuallyHidden from '../VisuallyHidden'
 
 const MobileMenu = ({ isOpen, onDismiss }) => {
-  if (!isOpen) {
-    return null
-  }
-
   return (
-    <Overlay>
+    <Overlay isOpen={isOpen} onDismiss={onDismiss}>
       <Content aria-label={'Menu'}>
         <Button onClick={onDismiss}>
           <Icon id="close" />
