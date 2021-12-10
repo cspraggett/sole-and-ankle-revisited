@@ -55,6 +55,7 @@ const MainHeader = styled.div`
 
   @media (max-width: ${BREAK_POINTS.laptop}) {
     border-top: 4px solid var(--color-gray-900);
+    border-bottom: 1px solid var(--color-gray-300);
     align-items: center;
   }
 `
